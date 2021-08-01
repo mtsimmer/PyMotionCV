@@ -1,0 +1,10 @@
+#Messing with RTSP
+ffmpeg.exe -i "rtsp://95.238.250.95:554/1" -y -s 854x480 -c:v libx265 -fps=2 myStrem.mp4
+
+ffmpeg.exe -rtsp_transport tcp -i "rtsp://95.238.250.95:554/1" -y -fpsmax 2 -c:v libx264 myStrem.mp4
+
+ffmpeg.exe -framerate 4 -i "myStrem.mp4" -y -c:v libx265 myStreamComp.mp4
+
+C:\Users\Mtsimmer\Downloads\ffmpeg-4.4-full_build\ffmpeg-4.4-full_build\bin\ffmpeg.exe -framerate 10 -i 95.0.0.0_%d.jpg -c:v libx265 joined.mp4
+
+C:\Users\Mtsimmer\Downloads\ffmpeg-4.4-full_build\ffmpeg-4.4-full_build\bin\ffmpeg.exe -hwaccel cuda -framerate 10 -i 95.0.0.0_%d.jpg -c:v hevc_nvenc joinedACCL.mp4 

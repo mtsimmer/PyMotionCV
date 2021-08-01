@@ -1,0 +1,4 @@
+#Dependecies
+python3 -m pip install MatPlotLib
+python3 -m pip install numpy
+python3 -m pip install opencv-python
